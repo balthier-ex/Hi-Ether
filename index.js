@@ -4,7 +4,7 @@ function setupEnvironment() {
 
 function daysUntilTarget() {
   const dayInMilliseconds = 1000 * 60 * 60 * 24;
-  const targetDate = new Date(2018, 11, 7);
+  const targetDate = Date.parse(process.env.TARGET_DATE);
   const currentDate = new Date();
   return Math.ceil((targetDate - currentDate) / dayInMilliseconds);
 }
