@@ -38,7 +38,6 @@ function sendMessageIfNotReleased() {
     }
 }
 
-// https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference-node
 module.exports = function (context, myTimer) {
     sendMessageIfNotReleased();
     context.done();
